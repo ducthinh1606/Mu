@@ -36,6 +36,7 @@ date_default_timezone_set('Asia/Ho_Chi_Minh');
 
             <div class="navbar-collapse">
                 <ul class="nav navbar-nav">
+                    <li><a href="index.php">Event</a></li>
                     <li><a href="roomy.php">Roomy event</a></li>
                     <li><a href="">Maze</a></li>
                     <li><a href="">Hướng dẫn chơi game</a></li>
