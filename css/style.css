@@ -24,6 +24,16 @@ td{
     z-index: 1;
 }
 
-.eventName:hover .eventTime {
+.eventName:hover .eventTime{
     visibility: visible;
+}
+
+.eventName:hover .score{
+    visibility: visible;
+}
+
+.eventName .score{
+    visibility: hidden;
+    position: absolute;
+    z-index: 1;
 }

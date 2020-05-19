@@ -115,6 +115,59 @@
     <tr>
         <td height="80"></td>
     </tr>
-
-
-
+    <tr>
+        <td align="center">
+                <b>
+                    <div class="eventName">Rewards 250-390 point
+                        <span>
+                            <img src="images/250-390.jpg" alt="" class="score">
+                        </span>
+                    </div>
+                </b>
+        </td>
+    </tr>
+    <tr>
+        <td height="80"></td>
+    </tr>
+    <tr>
+        <td align="center">
+                <b>
+                    <div class="eventName">Rewards 400-490 point
+                        <span>
+                            <img src="images/400-490.jpg" alt="" class="score">
+                        </span>
+                    </div>
+                </b>
+        </td>
+    </tr>
+    <tr>
+        <td height="80"></td>
+    </tr>
+    <tr>
+        <td align="center">
+                <b>
+                    <div class="eventName">Rewards 500+ point
+                        <span>
+                            <img src="images/500.jpg" alt="" class="score">
+                        </span>
+                    </div>
+                </b>
+        </td>
+    </tr>
+    <tr>
+        <td height="80"></td>
+    </tr>
+    <tr>
+        <td align="center">
+                <b>
+                    <div class="eventName">Score Table
+                        <span>
+                            <img src="images/event-point-table.jpg" alt="" class="score">
+                        </span>
+                    </div>
+                </b>
+        </td>
+    </tr>
+    <tr>
+        <td height="80"></td>
+    </tr>
