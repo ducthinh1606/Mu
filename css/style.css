@@ -37,3 +37,8 @@ td{
     position: absolute;
     z-index: 1;
 }
+
+td.maze{
+    width: 1000px;
+}
+
