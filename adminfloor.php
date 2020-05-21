@@ -14,10 +14,14 @@ if (isset($_GET['value']))
             echo "<table class='maze'>";
             echo "<tr>";
             echo "<td align='center'>";
-            echo "<img width='400px' src='maze/". $row['start'] ."' alt=''>";
+            echo "<img width='400px' src='admin/maze/". $row['start'] ."' alt=''>";
             echo "</td>";
             echo "<td align='center'>";
-            echo "<img width='400px' src='maze/". $row['end'] ."' alt=''>";
+            echo "<img width='400px' src='admin/maze/". $row['endpoint'] ."' alt=''>";
+            echo "</td>";
+            echo "<td align='center'>";
+            echo "<a href='admin/update.php?id=". $row['id'] ."'>Update</a><br>";
+            echo "<a href='admin/delete.php?id=". $row['id'] ."'>Delete</a>";
             echo "</td>";
             echo "</tr>";
             echo "<tr>";

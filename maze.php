@@ -3,7 +3,7 @@ $sql = "SELECT DISTINCT floor FROM maze";
 $result = $conn->query($sql);
 
 
-$sql1 = "select * from maze";
+$sql1 = "select * from maze where floor=1";
 
 $result1 = $conn->query($sql1);
 if ($result->num_rows > 0)
@@ -42,7 +42,27 @@ if ($result->num_rows > 0)
                     </td>
                 </tr>
                 <table class="floor">
-
+                    <?php
+                    if($result1->num_rows > 0)
+                    {
+                        while ($row = $result1->fetch_assoc()){ ?>
+                            <table class='maze'>
+                                <tr>
+                                    <td align='center'>
+                                        <img width='400px' src='admin/maze/<?php echo $row['start'] ?>' alt=''>
+                                    </td>
+                                    <td align='center'>
+                                        <img width='400px' src='admin/maze/<?php echo $row['endpoint'] ?>' alt=''>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td height='50px'></td>
+                                </tr>
+                            </table>
+                            <?php
+                        }
+                    }
+                    ?>
                 </table>
             </table>
             </form>

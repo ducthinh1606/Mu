@@ -8,7 +8,7 @@ if (!isset($_SESSION['username'])) {
 $sql = "SELECT DISTINCT floor FROM maze";
 $result = $conn->query($sql);
 
-$sql1 = "select * from maze";
+$sql1 = "select * from maze where floor=1";
 
 $result1 = $conn->query($sql1);
 if ($result->num_rows > 0)
@@ -63,7 +63,7 @@ if ($result->num_rows > 0)
                 <div class="dropdown">
                     <button class="mainmenubtn"><?php echo $_SESSION['username'] ?></button>
                     <div class="dropdown-child">
-                        <a href="">Logout</a>
+                        <a href="logout.php">Logout</a>
                     </div>
                 </div>
 
@@ -91,17 +91,44 @@ if ($result->num_rows > 0)
             <tr>
                 <td>
                     <form action="" method="get">
-                        <table width="1000" align="center" border="1">
+                        <table width="1000" align="center">
                             <tr align="center">
-                                <td>
+                                <td style="width: 1450px">
                                     Start
                                 </td>
-                                <td>
+                                <td style="width: 1450px">
                                     End
+                                </td>
+                                <td>
+                                    <a href="admin/add.php">Add</a>
                                 </td>
                             </tr>
                             <table class="floor">
-
+                                <?php
+                                if($result1->num_rows > 0)
+                                {
+                                    while ($row = $result1->fetch_assoc()){ ?>
+                                        <table class='maze'>
+                                            <tr>
+                                                <td align='center'>
+                                                    <img width='400px' src='admin/maze/<?php echo $row['start'] ?>' alt=''>
+                                                </td>
+                                                <td align='center'>
+                                                    <img width='400px' src='admin/maze/<?php echo $row['endpoint'] ?>' alt=''>
+                                                </td>
+                                                <td align="center">
+                                                    <a href="admin/update.php?id=<?php echo $row['id'] ?>">Update</a><br>
+                                                    <a href="admin/delete.php?id=<?php echo $row['id'] ?>">Delete</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td height='50px'></td>
+                                            </tr>
+                                        </table>
+                                <?php
+                                    }
+                                }
+                                ?>
                             </table>
                         </table>
                     </form>
