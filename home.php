@@ -70,7 +70,7 @@ if ($result->num_rows > 0)
             </div>
         </div>
     </div>
-        <table width="1000" align="center" border="1">
+        <table width="1000" align="center">
             <tr>
                 <td align="center" height="80px">[ MAZE ]</td>
             </tr>

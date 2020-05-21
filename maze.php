@@ -11,7 +11,7 @@ if ($result->num_rows > 0)
 
 ?>
 
-<table width="1000" align="center" border="1">
+<table width="1000" align="center">
     <tr>
         <td align="center" height="80px">[ MAZE ]</td>
     </tr>
@@ -32,7 +32,7 @@ if ($result->num_rows > 0)
     <tr>
         <td>
             <form action="" method="get">
-            <table width="1000" align="center" border="1">
+            <table width="1000" align="center">
                 <tr align="center">
                     <td>
                         Start
