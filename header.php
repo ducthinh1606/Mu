@@ -11,10 +11,16 @@ date_default_timezone_set('Asia/Ho_Chi_Minh');
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="css/style.css">
     <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+    <style>
+        .imgSET{
+            opacity: 0.1;
+            filter: alpha(opacity=10);
+        }
+    </style>
     <script>
         $(function() {
             $(".imgDisplay").click(function() {
-                $(this).hide();
+                $(this).toggleClass("imgSET");
             });
         });
 

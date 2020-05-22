@@ -11,9 +11,6 @@ $result = $conn->query($sql);
 $sql1 = "select * from maze where floor=1";
 
 $result1 = $conn->query($sql1);
-if ($result->num_rows > 0)
-{
-
 ?>
 <html>
 <head>
@@ -83,7 +80,6 @@ if ($result->num_rows > 0)
                         <?php
                         while ($row = $result->fetch_assoc()) {
                             echo "<option value='" .$row['floor'] ."'>Floor: " . $row["floor"] . "</option>";
-                        }
                         }?>
                     </select>
                 </td>
