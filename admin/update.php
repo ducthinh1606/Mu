@@ -21,7 +21,7 @@ if(isset($_GET['id'])) {
             <img src="maze/<?php echo $end ?>" alt="">
             <input type="file" name="end"/><br><br>
             <div>Floor</div>
-            <input type="text" name="floor" value="<?php echo $floor ?>"><br><br>
+            <input type="number" name="floor" value="<?php echo $floor ?>"><br><br>
             <input type="submit" name="add" value="Upload"/>
         </form>
 <?php

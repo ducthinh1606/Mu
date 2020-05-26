@@ -9,7 +9,7 @@
     <div>Img End</div>
     <input type="file" name="end"/><br><br>
     <div>Floor</div>
-    <input type="text" name="floor"><br><br>
+    <input type="number" name="floor"><br><br>
     <input type="submit" name="add" value="Upload"/>
 </form>
 <?php // Xử Lý Upload
@@ -23,9 +23,9 @@ if (isset($_POST['add']))
     {
         // Nếu file upload không bị lỗi,
         // Tức là thuộc tính error > 0
-        if ($_FILES['start']['error'] > 0 && $_FILES['end']['error'] > 0)
+        if ($_FILES['start']['error'] > 0 || $_FILES['end']['error'] > 0 || is_numeric($_POST['floor']) == false)
         {
-            echo 'File Upload Bị Lỗi';
+            echo 'Chưa up đầy đủ hoặc sai thông tin';
         }
         else{
             // Upload file
@@ -42,7 +42,7 @@ if (isset($_POST['add']))
             move_uploaded_file($_FILES['end']['tmp_name'], 'maze/'.$_FILES['end']['name']);
 
             if (mysqli_query($conn, $sql)) {
-                echo "Add success";
+                header('Location: http://thuvienmu.com/home.php');
             } else {
                 echo "Error: " . $sql . "<br>" . mysqli_error($conn);
             }

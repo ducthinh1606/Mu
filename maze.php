@@ -46,10 +46,14 @@ $result1 = $conn->query($sql1);
                             <table class='maze'>
                                 <tr>
                                     <td align='center'>
-                                        <img width='400px' src='admin/maze/<?php echo $row['start'] ?>' alt=''>
+                                        <a data-fancybox='gallery' data-width='1000' data-height='1000' href='admin/maze/<?php echo $row['start'] ?>'>
+                                            <img width='400px' height='400px' class='zoom' src='admin/maze/<?php echo $row['start'] ?>' alt=''>
+                                        </a>
                                     </td>
                                     <td align='center'>
-                                        <img width='400px' src='admin/maze/<?php echo $row['endpoint'] ?>' alt=''>
+                                        <a data-fancybox='gallery' data-width='1000' data-height='1000' href='admin/maze/<?php echo $row['endpoint'] ?>'>
+                                            <img width='400px' height='400px' class='zoom' src='admin/maze/<?php echo $row['endpoint'] ?>' alt=''>
+                                        </a>
                                     </td>
                                 </tr>
                                 <tr>
@@ -81,4 +85,10 @@ $result1 = $conn->query($sql1);
                 }
             })
         }
+
+        $('[data-fancybox="gallery"]').fancybox({
+            loop: true,
+            transitionEffect: "tube",
+            animationEffect: "zoom",
+        });
     </script>
